@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Главный экран каталога литых ёлок irnazarova_elki: Царская и Королевская от 150 до 270 см, выбор высоты, гирлянда и заказ в WhatsApp, отправка по всей России">
+<meta name="theme-color" content="#0F241D">
+<title>Литые ёлки · главный экран</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap">
+<style>
+/* Layout: вечерняя гостиная. Тёмно-хвойный фон с тёплыми огоньками, слева цена «от» и кнопки, справа карточка ёлки: модель, высота, цена, в корзину */
+:root{
+  --bg:#0F241D;
+  --bg2:#0B1C16;
+  --surface:#163329;
+  --surface2:#1C3E32;
+  --ink:#F7F1E4;
+  --muted:#BFC9BE;
+  --dim:#8C9C90;
+  --line:#2A4A3E;
+  --gold:#D3A548;
+  --gold-hi:#E8C06A;
+  --gold-tint:#2E3A22;
+  --cream:#F6F1E6;
+  --wa:#1FAF5A;
+  --font:"Onest",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --serif:"Playfair Display",Georgia,serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.5;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+.wrap{max-width:1280px;margin:0 auto;padding-left:max(clamp(16px,2.6vw,32px),env(safe-area-inset-left,0px));padding-right:max(clamp(16px,2.6vw,32px),env(safe-area-inset-right,0px))}
+h1,h2,h3{margin:0;text-wrap:balance}
+p{margin:0}
+a{color:inherit}
+button{font-family:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold-hi);outline-offset:3px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;border-radius:14px;padding:16px 26px;font-weight:700;font-size:16px;line-height:1.2;cursor:pointer;text-decoration:none;transition:transform .15s,background-color .15s,box-shadow .15s;white-space:nowrap}
+.btn:hover{transform:translateY(-2px)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn.gold{background:var(--gold);color:#1A1406;box-shadow:0 14px 34px -14px rgb(211 165 72 / .8)}
+.btn.gold:hover{background:var(--gold-hi)}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px #3C6253}
+.btn.ghost:hover{box-shadow:inset 0 0 0 1.5px var(--muted)}
+
+/* метка наброска и шапка */
+.draft{background:#1B2E22;color:#D9CFA8;font-size:12.5px;line-height:1.35;padding:7px 16px;text-align:center;border-bottom:1px solid #2E4433}
+.draft .sm{display:none}
+@media (max-width:640px){.draft .lg{display:none}.draft .sm{display:inline}}
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;gap:28px;padding-block:12px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;flex:none}
+.logo i{width:46px;height:46px;border-radius:50%;background:linear-gradient(160deg,#21483A,#132E25);border:1.5px solid #3E5F4A;display:grid;place-items:center}
+.logo i svg{width:26px;height:30px}
+.logo b{display:block;font-family:var(--serif);font-weight:700;font-size:21px;letter-spacing:.01em;line-height:1.1}
+.logo small{display:block;font-size:12px;font-weight:600;color:var(--dim);letter-spacing:.02em}
+nav{display:flex;gap:26px;font-size:15px;font-weight:600;margin-left:auto}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+.h-right{display:flex;align-items:center;gap:8px}
+.ic{width:44px;height:44px;border-radius:13px;border:1.5px solid var(--line);background:var(--surface);display:grid;place-items:center;cursor:pointer;text-decoration:none;flex:none;color:var(--ink)}
+.ic:hover{border-color:var(--muted)}
+.ic svg{width:20px;height:20px}
+.ic.wa{color:#3DD07C}
+.ic.tg{color:#5BB8EE}
+.ic.menu{display:none}
+.cart{display:inline-flex;align-items:center;gap:9px;height:44px;border-radius:13px;border:1.5px solid #6E5A2C;background:var(--gold-tint);padding:0 14px;font-weight:700;font-size:14.5px;cursor:pointer;color:var(--ink)}
+.cart svg{width:19px;height:19px;color:var(--gold-hi)}
+.cart b{min-width:22px;height:22px;border-radius:999px;background:var(--gold);color:#1A1406;font-size:12.5px;display:grid;place-items:center;padding:0 6px}
+@media (max-width:1100px){nav{display:none}.h-right{margin-left:auto}}
+@media (max-width:640px){.ic.menu{display:grid}.ic.tg,.ic.ig,.ic.wa{display:none}.cart span{display:none}.cart{padding:0 11px}.logo i{width:40px;height:40px}.logo b{font-size:18px}header .wrap{gap:10px;padding-block:9px}.ic,.cart{height:42px}.ic{width:42px;border-radius:12px}}
+
+/* первый экран */
+.hero-bg{position:relative;overflow:hidden;isolation:isolate;background:radial-gradient(1200px 600px at 78% 30%,#1D4335 0%,transparent 60%),radial-gradient(800px 500px at 10% 100%,#132F26 0%,transparent 70%),var(--bg)}
+.lights{position:absolute;inset:0;z-index:-1;pointer-events:none}
+.lights i{position:absolute;width:6px;height:6px;border-radius:50%;background:#F4C96A;box-shadow:0 0 12px 4px rgb(244 201 106 / .45);opacity:.8}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,640px);grid-template-areas:"l s";column-gap:clamp(28px,4.5vw,72px);align-items:center;min-height:calc(100svh - 104px);padding-block:clamp(20px,3vw,40px)}
+.h-left{grid-area:l;display:grid;gap:22px;align-content:center}
+.stage{grid-area:s}
+.where{display:inline-flex;align-items:center;gap:10px;justify-self:start;font-size:14px;font-weight:700;color:#E3D6B0;background:rgb(211 165 72 / .1);border:1px solid rgb(211 165 72 / .3);border-radius:999px;padding:7px 15px}
+.where i{width:7px;height:7px;border-radius:50%;background:var(--gold-hi);box-shadow:0 0 0 4px rgb(232 192 106 / .2)}
+h1{font-family:var(--serif);font-weight:700;font-size:clamp(40px,4.8vw,70px);line-height:1.02;letter-spacing:-.015em}
+h1 em{font-style:normal;color:var(--gold-hi);white-space:nowrap}
+.sub{font-size:clamp(16.5px,1.35vw,19.5px);line-height:1.55;color:var(--muted);max-width:46ch}
+.sub b{color:var(--ink);font-weight:700}
+.cta{display:flex;flex-wrap:wrap;gap:10px}
+.facts{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:0;margin-top:8px;border-top:1px solid var(--line);padding-top:22px}
+.facts div{display:grid;gap:2px;padding-right:28px;margin-right:28px;border-right:1px solid var(--line)}
+.facts div:last-child{border-right:0;margin-right:0;padding-right:0}
+.facts b{font-family:var(--serif);font-weight:700;font-size:clamp(20px,1.8vw,26px);line-height:1.15;color:var(--cream);white-space:nowrap}
+.facts span{font-size:13.5px;color:var(--dim)}
+
+/* карточка ёлки */
+.stage{background:linear-gradient(180deg,var(--surface2),var(--surface));border:1px solid #33594A;border-radius:30px;padding:12px;box-shadow:0 50px 90px -40px rgb(0 0 0 / .85),0 0 0 1px rgb(255 255 255 / .02) inset;display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:18px}
+.pic{position:relative;border-radius:22px;overflow:hidden;min-height:560px;background:#2A2016}
+.pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:30% 40%;transition:opacity .25s}
+.tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:3px;background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:3px}
+.tabs button{border:0;background:transparent;border-radius:11px;padding:9px 2px;font-size:13.5px;font-weight:700;cursor:pointer;color:#C9D2C6;white-space:nowrap}
+.tabs button:hover{color:var(--ink)}
+.tabs button[aria-selected="true"]{background:var(--cream);color:#132B22}
+.hit.sale{background:#C2412D;color:#FFF5EE}
+.hit{position:absolute;left:12px;bottom:12px;background:var(--gold);color:#1A1406;font-size:12.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:7px 12px}
+.panel{display:grid;gap:16px;padding:14px 8px 6px 0;align-content:center}
+.p-h{display:grid;gap:4px}
+.p-h h2{font-family:var(--serif);font-weight:700;font-size:28px;line-height:1.1}
+.p-h span{font-size:13.5px;color:var(--dim)}
+.specs{display:flex;flex-wrap:wrap;gap:6px}
+.specs span{font-size:13px;font-weight:600;color:#D7DCCD;background:rgb(255 255 255 / .05);border:1px solid var(--line);border-radius:999px;padding:5px 11px}
+.lbl{font-size:13px;font-weight:700;color:var(--dim);margin-bottom:8px;display:block;letter-spacing:.02em}
+.sizes{display:flex;flex-wrap:wrap;gap:6px}
+.sizes button{border:1.5px solid #3A5F50;background:transparent;border-radius:12px;padding:9px 0;font-size:15px;font-weight:700;cursor:pointer;width:52px}
+.sizes button:hover{border-color:var(--muted)}
+.sizes button[aria-pressed="true"]{background:var(--cream);border-color:var(--cream);color:#132B22}
+.buy{display:grid;gap:14px;border-top:1px solid var(--line);padding-top:16px}
+.price{font-family:var(--serif);font-weight:700;font-size:38px;line-height:1;white-space:nowrap}
+.price s{font-family:var(--font);font-size:16px;font-weight:600;color:var(--dim);margin-left:8px;vertical-align:middle}
+.price small{display:block;font-family:var(--font);font-size:12.5px;font-weight:600;color:var(--dim);margin-top:6px}
+.buy .btn{width:100%}
+.gar{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--muted);cursor:pointer}
+.gar input{appearance:none;-webkit-appearance:none;width:22px;height:22px;border-radius:7px;border:1.5px solid #4A7262;display:grid;place-items:center;margin:0;cursor:pointer;flex:none}
+.gar input:checked{background:var(--gold);border-color:var(--gold)}
+.gar input:checked::after{content:"";width:6px;height:11px;border:solid #1A1406;border-width:0 2.5px 2.5px 0;transform:rotate(45deg) translate(-1px,-1px)}
+.gar b{color:var(--ink);font-weight:700}
+
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;grid-template-areas:"l" "s";min-height:0;row-gap:28px}
+  .stage{max-width:640px}
+}
+@media (max-width:640px){
+  .hero{padding-block:18px 32px;row-gap:0;grid-template-areas:"w" "h" "s" "t" "c" "f"}
+  .h-left{display:contents}
+  .where{grid-area:w;font-size:13px;padding:6px 12px;margin-bottom:14px}
+  h1{grid-area:h;font-size:38px;margin-bottom:18px}
+  .stage{grid-area:s;border-radius:24px;padding:8px;grid-template-columns:1fr;gap:0}
+  .sub{grid-area:t;margin-top:22px;font-size:16px}
+  .cta{grid-area:c;margin-top:18px}
+  .cta .btn{flex:1 1 100%}
+  .facts{grid-area:f;margin-top:24px;grid-template-columns:repeat(3,minmax(0,1fr))}
+  .facts div{padding-right:10px;margin-right:10px}
+  .facts b{font-size:18px;white-space:normal}
+  .facts span{font-size:12px}
+  .pic{border-radius:18px;min-height:0;aspect-ratio:1/.7}
+  .specs{gap:5px}
+  .specs span{font-size:12px;padding:4px 9px}
+  .lbl{margin-bottom:6px}
+  .pic img{object-position:50% 14%}
+  .panel{padding:14px 6px 6px;gap:12px}
+  .p-h{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+  .buy{grid-template-columns:auto 1fr;align-items:center;gap:14px;padding-top:12px}
+  .p-h h2{font-size:22px}
+  .price{font-size:28px}
+  .sizes button{padding:8px 0;width:auto;flex:1;font-size:14px}
+  .tabs button{padding:8px 2px;font-size:13px}
+}
+
+footer{background:var(--bg2);border-top:1px solid var(--line)}
+footer .wrap{display:grid;gap:16px;padding-block:24px;font-size:13.5px;color:var(--muted)}
+.f-top,.f-bot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px}
+.f-bot{border-top:1px solid var(--line);padding-top:16px}
+.soc{display:flex;gap:8px}
+.f-docs{display:flex;flex-wrap:wrap;gap:6px 18px}
+.f-docs button{border:0;background:none;padding:0;cursor:pointer;color:var(--muted);text-decoration:underline;text-underline-offset:3px;font-size:13.5px}
+.sign{display:inline-flex;align-items:center;flex-wrap:wrap;gap:10px}
+.sign b{font-weight:800;letter-spacing:.06em;color:var(--ink)}
+.rnd{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--surface2);color:var(--ink);text-decoration:none}
+.rnd:hover{background:var(--ink);color:var(--bg)}
+.rnd svg{width:16px;height:16px}
+
+dialog{border:1px solid var(--line);padding:0;border-radius:26px;background:var(--surface);color:var(--ink);width:min(460px,calc(100% - 24px));max-height:calc(100dvh - 24px);box-shadow:0 40px 80px -20px rgb(0 0 0 / .7)}
+dialog::backdrop{background:rgb(5 10 8 / .7);backdrop-filter:blur(3px)}
+.dl{padding:22px;display:grid;gap:14px}
+.dl-h{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.dl-h h2{font-family:var(--serif);font-size:22px;font-weight:700}
+.x{width:38px;height:38px;border-radius:50%;border:0;background:var(--surface2);cursor:pointer;font-size:20px;line-height:1;display:grid;place-items:center;flex:none}
+.doc{font-size:14px;line-height:1.55;color:var(--muted);display:grid;gap:10px}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--cream);color:#132B22;padding:12px 20px;border-radius:999px;font-weight:700;font-size:14px;z-index:60;width:max-content;max-width:calc(100% - 32px);text-align:center;box-shadow:0 20px 40px -10px rgb(0 0 0 / .5)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-tree" viewBox="0 0 100 124"><path d="M50 4 72 38H62l20 30H68l22 36H10l22-36H18l20-30H28z" fill="#D3A548"/><rect x="45" y="104" width="10" height="16" rx="2" fill="#D3A548"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.2A9.8 9.8 0 0 0 3.6 17l-1.3 4.8 4.9-1.3A9.8 9.8 0 1 0 12 2.2zm0 17.9a8.1 8.1 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8.1 8.1 0 1 1 12 20.1zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3.9 2.5c.1.2 1.6 2.5 4 3.5 1.5.6 2 .7 2.8.6.4-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.4-.2z"/></symbol>
+    <symbol id="i-tg" viewBox="0 0 24 24"><path fill="currentColor" d="M21.4 4.3 2.9 11.5c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.5c.2.6.4.8.9.8s.6-.2.9-.5l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8L22.8 5.8c.3-1.3-.4-1.9-1.4-1.5zM8.6 14.1l9.6-6c.5-.3.9-.1.5.2l-7.8 7.1-.3 3.3-2-4.6z"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M7.5 3h9A4.5 4.5 0 0 1 21 7.5v9a4.5 4.5 0 0 1-4.5 4.5h-9A4.5 4.5 0 0 1 3 16.5v-9A4.5 4.5 0 0 1 7.5 3z"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" d="M5 8h14l-1.2 12H6.2z"/><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" d="M9 10V7a3 3 0 0 1 6 0v3"/></symbol>
+  </defs>
+</svg>
+
+<div class="draft"><span class="lg">Набросок для&nbsp;irnazarova_elki: фото, модели и&nbsp;цены ваши, кнопки пока не&nbsp;отправляют заказ</span><span class="sm">Набросок: фото и&nbsp;цены ваши, заказ не&nbsp;отправляется</span></div>
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top"><i><svg aria-hidden="true"><use href="#i-tree"/></svg></i><span><b>Irnazarova</b><small>литые премиум ёлки · Уфа</small></span></a>
+    <nav><a href="#top">Ёлки</a><a href="#top">Гирлянды</a><a href="#top">Доставка</a><a href="#top">Отзывы</a><a href="#top">Вопросы</a></nav>
+    <div class="h-right">
+      <a class="ic wa" href="https://wa.me/79874936467" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
+      <a class="ic tg" href="https://t.me/elki_ufa_irnazarova" target="_blank" rel="noopener" aria-label="Telegram-канал" title="Telegram"><svg aria-hidden="true"><use href="#i-tg"/></svg></a>
+      <a class="ic ig" href="https://instagram.com/irnazarova_elki" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg aria-hidden="true"><use href="#i-ig"/></svg></a>
+      <button type="button" class="cart" id="cartBtn"><svg aria-hidden="true"><use href="#i-bag"/></svg><span>Корзина</span><b id="cartN">0</b></button>
+      <button type="button" class="ic menu" aria-label="Меню" data-toast="На сайте здесь откроется меню разделов"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero-bg">
+    <div class="lights" aria-hidden="true">
+      <i style="left:4%;top:12%"></i><i style="left:14%;top:6%;opacity:.5"></i><i style="left:26%;top:15%;opacity:.6"></i><i style="left:38%;top:7%;opacity:.4"></i><i style="left:47%;top:18%;opacity:.7"></i><i style="left:9%;top:88%;opacity:.35"></i><i style="left:52%;top:92%;opacity:.4"></i><i style="left:96%;top:10%;opacity:.6"></i><i style="left:58%;top:4%;opacity:.5"></i>
+    </div>
+    <section class="wrap hero">
+      <div class="h-left">
+        <span class="where"><i></i>Уфа · отправка по&nbsp;всей России</span>
+        <h1>Полностью литые ёлки <em>от&nbsp;11&nbsp;700&nbsp;₽</em></h1>
+        <p class="sub">Царская, Королевская и&nbsp;Сказочная высотой от&nbsp;150 до&nbsp;270&nbsp;см. <b>Выберите высоту, добавьте гирлянду</b>, и&nbsp;заказ уйдёт в&nbsp;WhatsApp одним сообщением. На&nbsp;Сказочную сейчас распродажа.</p>
+        <div class="cta">
+          <button type="button" class="btn gold" data-toast="На сайте здесь откроется каталог всех ёлок">Выбрать ёлку</button>
+          <a class="btn ghost" href="https://wa.me/79874936467" target="_blank" rel="noopener"><svg aria-hidden="true" style="color:#3DD07C"><use href="#i-wa"/></svg>Спросить в&nbsp;WhatsApp</a>
+        </div>
+        <div class="facts">
+          <div><b>150–270&nbsp;см</b><span>11 высот на&nbsp;выбор</span></div>
+          <div><b>100% литая</b><span>хвоя у&nbsp;всех моделей</span></div>
+          <div><b>Вся Россия</b><span>отправка из&nbsp;Уфы</span></div>
+        </div>
+      </div>
+
+      <div class="stage" aria-label="Выбор ёлки">
+        <div class="pic">
+          <img id="pic" src="img/korolevskaya-full.jpg" alt="Королевская ель в гостиной у камина" width="900" height="1600">
+          <span class="hit" id="hit">Хит продаж</span>
+        </div>
+        <div class="panel">
+          <div class="tabs" role="tablist" aria-label="Модель">
+            <button type="button" role="tab" aria-selected="true" data-m="kor">Королевская</button>
+            <button type="button" role="tab" aria-selected="false" data-m="car">Царская</button>
+            <button type="button" role="tab" aria-selected="false" data-m="skaz">Сказочная</button>
+          </div>
+          <div class="p-h"><h2 id="mName">Королевская ель</h2><span id="mMade">производство Китай</span></div>
+          <div class="specs"><span>Полностью литая</span><span id="mAsm">Зонтичная сборка</span><span id="mRange">5 высот</span></div>
+          <div><span class="lbl">Высота</span><div class="sizes" id="sizes"></div></div>
+          <label class="gar"><input type="checkbox" id="gar"><span>Гирлянда «Хвойная лапа», 100&nbsp;м <b>+2&nbsp;550&nbsp;₽</b></span></label>
+          <div class="buy">
+            <div class="price" id="price">24&nbsp;500&nbsp;₽<small id="priceNote">за&nbsp;ёлку 210&nbsp;см</small></div>
+            <button type="button" class="btn gold" id="add"><svg aria-hidden="true"><use href="#i-bag"/></svg>В&nbsp;корзину</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-top">
+      <span>Литые ёлки из&nbsp;Уфы с&nbsp;отправкой по&nbsp;всей России</span>
+      <span class="soc">
+        <a class="rnd" href="https://wa.me/79874936467" target="_blank" rel="noopener" aria-label="WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
+        <a class="rnd" href="https://t.me/elki_ufa_irnazarova" target="_blank" rel="noopener" aria-label="Telegram-канал"><svg aria-hidden="true"><use href="#i-tg"/></svg></a>
+        <a class="rnd" href="https://instagram.com/irnazarova_elki" target="_blank" rel="noopener" aria-label="Instagram"><svg aria-hidden="true"><use href="#i-ig"/></svg></a>
+      </span>
+    </div>
+    <div class="f-bot">
+      <span class="f-docs"><button type="button" data-doc="policy">Политика конфиденциальности</button><button type="button" data-doc="consent">Согласие на&nbsp;обработку данных</button></span>
+      <span class="sign"><span><b>FOR.MI</b> designed &amp; developed by ABN</span><a class="rnd" href="https://t.me/abanev_dev" target="_blank" rel="noopener" aria-label="Telegram" title="Telegram"><svg aria-hidden="true"><use href="#i-tg"/></svg></a></span>
+    </div>
+  </div>
+</footer>
+
+<dialog id="docs" aria-labelledby="doc-t">
+  <div class="dl">
+    <div class="dl-h"><h2 id="doc-t">Политика конфиденциальности</h2><button type="button" class="x" data-close aria-label="Закрыть">×</button></div>
+    <div class="doc" id="doc-b"></div>
+  </div>
+</dialog>
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const rub=n=>n.toLocaleString("ru-RU").replace(/\s/g," ")+" ₽";
+const MODELS={
+  kor:{name:"Королевская ель",made:"производство Китай",photo:"img/korolevskaya-full.jpg",pos:"30% 40%",alt:"Королевская ель в гостиной у камина",sizes:[[150,11700],[180,18500],[210,24500],[240,31000],[270,34000]],def:210},
+  car:{name:"Царская ель",made:"производство Краснодар",photo:"img/carskaya-1.jpg",pos:"66% 50%",alt:"Царская ель в светлой гостиной",sizes:[[210,25000],[230,27000],[250,31000]],def:210},
+  skaz:{name:"Сказочная ель",made:"производство Краснодар",asm:"Отгибная сборка",badge:["Чёрная пятница",true],photo:"img/skazochnaya.jpg",pos:"50% 45%",alt:"Сказочная ель у кирпичной стены",sizes:[[185,14000],[200,15000],[215,16000]],old:{215:18000},def:215}
+};
+const GAR=2550;
+let cur="kor",h=210,cart=0;
+function toast(t){const el=document.createElement("div");el.className="toast";el.textContent=t;document.body.appendChild(el);setTimeout(()=>el.remove(),2600)}
+function renderSizes(){
+  const m=MODELS[cur];
+  $("#sizes").innerHTML=m.sizes.map(([cm])=>`<button type="button" aria-pressed="${cm===h}" data-h="${cm}">${cm}</button>`).join("");
+  $$("#sizes button").forEach(b=>b.addEventListener("click",()=>{h=+b.dataset.h;update()}));
+}
+function update(){
+  const m=MODELS[cur],p=m.sizes.find(s=>s[0]===h)[1];
+  $("#mName").textContent=m.name;$("#mMade").textContent=m.made;
+  $("#mRange").textContent=m.sizes.length+(m.sizes.length>4?" высот":" высоты");
+  $("#mAsm").textContent=m.asm||"Зонтичная сборка";
+  const b=m.badge||["Хит продаж",false];$("#hit").textContent=b[0];$("#hit").classList.toggle("sale",b[1]);
+  const g=$("#gar").checked,old=m.old&&m.old[h];
+  $("#price").innerHTML=`${rub(p+(g?GAR:0))}${old&&!g?`<s>${rub(old)}</s>`:""}<small>${g?`ёлка ${h} см и гирлянда`:`за ёлку ${h} см`}</small>`;
+  $$("#sizes button").forEach(b=>b.setAttribute("aria-pressed",+b.dataset.h===h));
+}
+function setModel(k){
+  cur=k;const m=MODELS[k];h=m.def;
+  const pic=$("#pic");pic.style.opacity=0;
+  setTimeout(()=>{pic.src=m.photo;pic.alt=m.alt;pic.style.objectPosition=m.pos;pic.style.opacity=1},150);
+  $$(".tabs button").forEach(b=>b.setAttribute("aria-selected",b.dataset.m===k));
+  renderSizes();update();
+}
+$$(".tabs button").forEach(b=>b.addEventListener("click",()=>setModel(b.dataset.m)));
+$("#gar").addEventListener("change",update);
+$("#add").addEventListener("click",()=>{cart++;$("#cartN").textContent=cart;toast(`${MODELS[cur].name.split(" ")[0]} ${h} см${$("#gar").checked?" и гирлянда":""} в корзине`)});
+$("#cartBtn").addEventListener("click",()=>toast(cart?"На сайте здесь корзина с доставкой и кнопкой «Заказать в WhatsApp»":"Корзина пока пустая"));
+$$("[data-toast]").forEach(b=>b.addEventListener("click",()=>toast(b.dataset.toast)));
+const OWNER="[ИП / название, уточнить]";
+const DOCS={
+  policy:["Политика конфиденциальности",`<p>${OWNER} обрабатывает имя, телефон и город доставки, которые вы указываете в заказе, только чтобы связаться с вами и отправить ёлку.</p><p>Данные не передаются третьим лицам, кроме службы доставки. Отозвать согласие можно, написав в WhatsApp.</p><p>Полный текст с реквизитами появится на готовом сайте.</p>`],
+  consent:["Согласие на обработку данных",`<p>Оформляя заказ, вы соглашаетесь, что ${OWNER} обработает ваше имя, телефон и адрес доставки для выполнения заказа.</p><p>Согласие действует до его отзыва. Отозвать его можно, написав в WhatsApp.</p>`]
+};
+$$("[data-doc]").forEach(b=>b.addEventListener("click",()=>{const [t,hh]=DOCS[b.dataset.doc];$("#doc-t").textContent=t;$("#doc-b").innerHTML=hh;$("#docs").showModal()}));
+$$("[data-close]").forEach(b=>b.addEventListener("click",()=>b.closest("dialog").close()));
+renderSizes();update();
+</script>
+</body>
+</html>

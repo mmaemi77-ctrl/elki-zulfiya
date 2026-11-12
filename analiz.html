@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Разбор для irnazarova_elki: сильные стороны, где теряются покупатели, магазины литых ёлок в Уфе и онлайн, что должен делать каталог">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Каталог для irnazarova_elki: рынок и конкуренты">
+<meta property="og:description" content="Что у вас уже сильное, где теряются покупатели, кто ещё продаёт литые ёлки и что должен делать каталог">
+<meta property="og:image" content="https://mmaemi77-ctrl.github.io/elki-zulfiya/og-analiz.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0F241D">
+<title>Литые ёлки · разбор</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap">
+<style>
+/* Layout: разбор-документ в одну колонку. Шапка тёмно-хвойная с огоньками, дальше светлая бумага; карточки только у отдельных объектов: конкуренты, переписка, идеи */
+:root{
+  --bg:#F6F1E6;--paper:#FFFDF8;--ink:#16231D;--muted:#55635A;--dim:#7D877F;--line:#E3D9C5;
+  --pine:#17382D;--pine2:#24503F;--deep:#0F241D;--gold:#B5862F;--gold-hi:#E8C06A;--gold-l:#EBD7A8;--gold-t:#F6ECD3;
+  --chat:#EDE5D8;--bubble:#FFFDF8;--bubble-out:#DCF7C5;
+  --font:"Onest",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --serif:"Playfair Display",Georgia,serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:16.5px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+.wrap{max-width:900px;margin:0 auto;padding-left:max(clamp(16px,4vw,32px),env(safe-area-inset-left,0px));padding-right:max(clamp(16px,4vw,32px),env(safe-area-inset-right,0px))}
+h1,h2,h3{margin:0;text-wrap:balance}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+
+/* шапка */
+.top{position:relative;overflow:hidden;isolation:isolate;background:radial-gradient(700px 400px at 85% 10%,#1F4637 0%,transparent 65%),var(--deep);color:#F7F1E4}
+.top i.l{position:absolute;z-index:-1;width:6px;height:6px;border-radius:50%;background:#F4C96A;box-shadow:0 0 12px 4px rgb(244 201 106 / .45);opacity:.75}
+.top .wrap{padding-block:clamp(30px,6vw,56px) clamp(34px,6vw,54px);display:grid;gap:20px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand i{width:56px;height:56px;border-radius:50%;background:linear-gradient(160deg,#21483A,#132E25);border:1.5px solid #3E5F4A;display:grid;place-items:center;flex:none}
+.brand i svg{width:28px;height:34px}
+.brand b{font-family:var(--serif);font-weight:700;font-size:20px;line-height:1.15;display:block}
+.brand small{font-size:13px;color:#AFC0B4}
+.top .eyebrow{color:var(--gold-hi)}
+.top h1{font-family:var(--serif);font-weight:700;font-size:clamp(32px,5.4vw,56px);line-height:1.05;letter-spacing:-.01em}
+.top h1 em{font-style:normal;color:var(--gold-hi)}
+.top p{max-width:60ch;font-size:clamp(17px,1.8vw,19px);color:#CFD9CF}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pills span{display:inline-flex;align-items:center;gap:8px;background:rgb(255 255 255 / .06);border:1px solid rgb(255 255 255 / .12);border-radius:999px;padding:6px 14px;font-weight:600;font-size:14px}
+.pills span::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold-hi)}
+
+/* разделы */
+section{padding-block:clamp(34px,5vw,54px);border-bottom:1px solid var(--line)}
+section:last-of-type{border-bottom:0}
+h2{font-family:var(--serif);font-weight:700;font-size:clamp(26px,3.4vw,38px);line-height:1.12;color:var(--pine);margin:8px 0 20px}
+h3{font-size:17px;font-weight:700;line-height:1.3}
+.lead{color:var(--muted);max-width:62ch;margin:-6px 0 22px}
+.list{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.list li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:12px;align-items:start}
+.list li::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--gold);margin:9px 0 0 9px}
+.list.plus li::before{content:"✓";width:24px;height:24px;border-radius:50%;background:var(--gold-t);color:var(--gold);font-weight:800;font-size:13px;display:grid;place-items:center;margin:2px 0 0}
+.list b{font-weight:700}
+
+.key{display:grid;counter-reset:k;background:var(--paper);border-radius:22px;border:1px solid var(--line);overflow:hidden}
+.key div{display:grid;grid-template-columns:44px minmax(0,1fr);gap:12px;padding:18px 20px;border-bottom:1px solid var(--line)}
+.key div:last-child{border-bottom:0}
+.key div::before{counter-increment:k;content:counter(k);font-family:var(--serif);font-weight:700;font-size:28px;line-height:1;color:var(--gold)}
+.key b{font-weight:700}
+@media (max-width:600px){.key div{grid-template-columns:26px minmax(0,1fr);padding:16px}.key div::before{font-size:23px}}
+
+.gal{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:24px}
+.gal figure{margin:0;background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.gal img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.gal figcaption{font-size:13.5px;color:var(--muted);padding:9px 12px 11px;line-height:1.35}
+.cap{font-size:13.5px;color:var(--dim);margin-top:8px}
+@media (max-width:640px){.gal{grid-template-columns:1fr 1fr}}
+
+.aud{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:680px){.aud{grid-template-columns:1fr}}
+.aud>div{display:grid;gap:8px;align-content:start}
+.aud h3{margin-bottom:4px}
+.q{background:var(--paper);border:1px solid var(--line);border-radius:16px 16px 16px 4px;padding:10px 14px;font-weight:500;font-size:15px}
+.season{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:2px solid var(--pine);margin-top:26px}
+.season div{padding:14px 14px 0 0;display:grid;gap:4px;align-content:start}
+.season b{font-family:var(--serif);font-weight:700;font-size:18px;color:var(--pine)}
+.season span{font-size:14px;color:var(--muted)}
+@media (max-width:600px){.season{grid-template-columns:1fr;gap:10px}}
+
+.comp{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:680px){.comp{grid-template-columns:1fr}}
+.cc{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:18px 20px;display:grid;gap:8px;align-content:start;min-width:0}
+.cc .where{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.cc a{font-size:14px;font-weight:600;color:var(--pine2);text-underline-offset:3px;word-break:break-all}
+.cc p{font-size:15px;color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
+.tags span{font-size:12.5px;font-weight:600;padding:4px 10px;border-radius:999px;background:var(--bg);border:1px solid var(--line)}
+.small{font-size:13.5px;color:var(--dim);margin-top:14px}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:22px}
+@media (max-width:680px){.two{grid-template-columns:1fr}}
+.box{border-radius:20px;padding:20px;display:grid;gap:12px;align-content:start}
+.box.norm{background:var(--paper);border:1px solid var(--line)}
+.box.gap{background:var(--pine);color:#F7F1E4}
+.box.gap h3{color:var(--gold-hi)}
+.box h3{font-family:var(--serif);font-weight:700;font-size:19px}
+.box ul{margin:0;padding-left:18px;display:grid;gap:6px;font-size:15px}
+
+.tasks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 14px}
+@media (max-width:680px){.tasks{grid-template-columns:1fr}}
+.tasks div{border-top:2px solid var(--gold);padding-top:12px;display:grid;gap:4px}
+.tasks p{font-size:15px;color:var(--muted)}
+
+.ba{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:680px){.ba{grid-template-columns:1fr}}
+.chat{background:var(--chat);border:1px solid #E2D7C4;border-radius:20px;padding:16px;display:grid;gap:8px;align-content:start}
+.chat .lbl{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.b{max-width:88%;padding:8px 12px;border-radius:14px;font-size:14.5px;line-height:1.45;white-space:pre-line}
+.b.in{justify-self:start;background:var(--bubble);border-bottom-left-radius:4px}
+.b.out{justify-self:end;background:var(--bubble-out);border-bottom-right-radius:4px}
+.b.order{justify-self:stretch;max-width:none;background:var(--bubble);border-bottom-left-radius:4px;display:grid;gap:6px}
+.b.order b{display:block;font-size:12.5px;color:#1C8A4C}
+.b.order .th{display:flex;gap:4px}
+.b.order .th img{width:48px;height:48px;object-fit:cover;border-radius:8px}
+.chat .foot{font-size:13px;color:var(--muted);margin-top:6px}
+
+.ideas{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:680px){.ideas{grid-template-columns:1fr}}
+.ideas div{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:16px 18px;display:grid;gap:4px;align-content:start}
+.ideas p{font-size:15px;color:var(--muted)}
+
+.qlist{margin:0;padding-left:24px;display:grid;gap:10px}
+.qlist li{padding-left:4px}
+.qlist li::marker{font-weight:800;color:var(--gold)}
+
+footer{background:var(--deep);color:#AFC0B4}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;padding-block:22px;font-size:13.5px}
+footer b{font-weight:800;letter-spacing:.06em;color:#F7F1E4}
+.sign{display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap}
+.rnd{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:#1C3E32;color:#F7F1E4}
+.rnd:hover{background:#F7F1E4;color:var(--deep)}
+.rnd svg{width:16px;height:16px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <i class="l" style="left:6%;top:14%" aria-hidden="true"></i><i class="l" style="left:30%;top:8%;opacity:.5" aria-hidden="true"></i><i class="l" style="left:62%;top:12%;opacity:.6" aria-hidden="true"></i><i class="l" style="left:88%;top:22%" aria-hidden="true"></i><i class="l" style="left:78%;top:86%;opacity:.4" aria-hidden="true"></i>
+  <div class="wrap">
+    <div class="brand"><i><svg viewBox="0 0 100 124" aria-hidden="true"><path d="M50 4 72 38H62l20 30H68l22 36H10l22-36H18l20-30H28z" fill="#D3A548"/><rect x="45" y="104" width="10" height="16" rx="2" fill="#D3A548"/></svg></i><span><b>irnazarova_elki</b><small>литые премиум ёлки · Уфа</small></span></div>
+    <div class="eyebrow">Разбор для&nbsp;Зулфии · 12&nbsp;ноября 2026</div>
+    <h1>Каталог для&nbsp;ваших ёлок: рынок и&nbsp;<em>конкуренты</em></h1>
+    <p>Посмотрела ваш Instagram, модели и&nbsp;цены, которые вы прислали, и&nbsp;магазины литых ёлок в&nbsp;Уфе и&nbsp;онлайн. Ниже: что у&nbsp;вас уже сильное, где теряются покупатели и&nbsp;что должен делать каталог.</p>
+    <div class="pills"><span>Уфа</span><span>Отправка по&nbsp;всей России</span><span>Литые ёлки и&nbsp;гирлянды</span></div>
+  </div>
+</div>
+
+<main class="wrap">
+  <section>
+    <div class="eyebrow">Коротко</div>
+    <h2>Главное в&nbsp;пяти пунктах</h2>
+    <div class="key">
+      <div><p><b>Хиты с&nbsp;ценами стоят прямо в&nbsp;шапке профиля.</b> Царская 210&nbsp;см за&nbsp;25&nbsp;000&nbsp;₽ видна с&nbsp;первой секунды. У&nbsp;многих продавцов ёлок в&nbsp;Instagram прайс спрятан в&nbsp;хайлайты, в&nbsp;файл или в&nbsp;закрытый канал.</p></div>
+      <div><p>Остальные модели и&nbsp;высоты лежат в&nbsp;Telegram-канале. До&nbsp;цены человек идёт через Instagram, Telegram и&nbsp;WhatsApp, и&nbsp;на&nbsp;каждом переходе часть людей отваливается.</p></div>
+      <div><p>Вопросы повторяются: есть&nbsp;ли заснеженная, какую высоту брать под&nbsp;мой потолок, какая гирлянда подойдёт, сколько доставка в&nbsp;мой город. В&nbsp;декабре их становится в&nbsp;разы больше, а&nbsp;отвечаете вы вручную.</p></div>
+      <div><p>Магазины-сети в&nbsp;Уфе уже продают литые ёлки через сайт с&nbsp;ценой в&nbsp;карточке. Чего я у&nbsp;них не&nbsp;встретила: видеообзоров от&nbsp;самого продавца и&nbsp;подбора гирлянды под&nbsp;высоту ёлки. У&nbsp;вас для&nbsp;этого уже есть рилс.</p></div>
+      <div><p>Каталог делается за&nbsp;7–10 дней и&nbsp;успевает к&nbsp;декабрю, когда ёлки покупают чаще всего. Ссылка встаёт в&nbsp;шапку Instagram, а&nbsp;заказы приходят вам в&nbsp;WhatsApp уже собранными.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Ваши сильные стороны</div>
+    <h2>Что у&nbsp;вас уже сильное</h2>
+    <ul class="list plus">
+      <li><span><b>Три полностью литые модели.</b> Царская и&nbsp;Королевская собираются «зонтом»: ветки на&nbsp;шарнирах раскрываются сами. У&nbsp;Сказочной отгибная сборка. Это легко показать на&nbsp;видео, и&nbsp;это снимает страх «буду собирать весь вечер».</span></li>
+      <li><span><b>Одиннадцать высот от&nbsp;150 до&nbsp;270&nbsp;см и&nbsp;цены от&nbsp;11&nbsp;700 до&nbsp;34&nbsp;000&nbsp;₽.</b> Есть ёлка и&nbsp;для детской в&nbsp;квартире, и&nbsp;для гостиной с&nbsp;высоким потолком. Сказочная сейчас на&nbsp;распродаже: от&nbsp;14&nbsp;000&nbsp;₽, 215&nbsp;см за&nbsp;16&nbsp;000 вместо 18&nbsp;000&nbsp;₽.</span></li>
+      <li><span><b>Вы сами в&nbsp;кадре.</b> «Распаковка Царской ёлки», «Обзор Королевской 270&nbsp;см», «Сказочная ель, самая бюджетная модель»: такие рилс показывают ёлку честнее студийного фото.</span></li>
+      <li><span><b>Отправка по&nbsp;всей России.</b> Хайлайт «Города» показывает, что ёлки уже уезжают далеко от&nbsp;Уфы.</span></li>
+      <li><span><b>Гирлянды и&nbsp;декор к&nbsp;ёлке.</b> «Хвойная лапа» на&nbsp;100&nbsp;м за&nbsp;2&nbsp;550&nbsp;₽ для тех, кто берёт ёлку, штора 3×3&nbsp;м за&nbsp;1&nbsp;400&nbsp;₽, светящиеся коробки в&nbsp;серебре и&nbsp;золоте комплектом за&nbsp;2&nbsp;600&nbsp;₽. Это готовые допродажи к&nbsp;каждому заказу.</span></li>
+      <li><span><b>Материал для&nbsp;сайта уже собран.</b> Отзывы в&nbsp;хайлайте «Отзыв», гирлянды в&nbsp;хайлайте «Гирлянда», живые фото ёлок в&nbsp;интерьерах.</span></li>
+    </ul>
+    <div class="gal">
+      <figure><img src="img/korolevskaya.jpg" alt="Королевская ель у камина" loading="lazy"><figcaption>Королевская у&nbsp;камина</figcaption></figure>
+      <figure><img src="img/carskaya-tree.jpg" alt="Царская ель в светлой гостиной" loading="lazy"><figcaption>Царская, полностью литая</figcaption></figure>
+      <figure><img src="img/decor.jpg" alt="Королевская ель в новогоднем убранстве" loading="lazy"><figcaption>Королевская в&nbsp;убранстве</figcaption></figure>
+      <figure><img src="img/garland.jpg" alt="Ёлка с гирляндой белого света" loading="lazy"><figcaption>С&nbsp;гирляндой белого света</figcaption></figure>
+      <figure><img src="img/skazochnaya.jpg" alt="Сказочная ель у кирпичной стены" loading="lazy"><figcaption>Сказочная, распродажа</figcaption></figure>
+      <figure><img src="img/obzor.jpg" alt="Обзор Королевской 270 см" loading="lazy"><figcaption>Обзор Королевской 270&nbsp;см</figcaption></figure>
+      <figure><img src="img/curtain.jpg" alt="Гирлянда-штора на окне" loading="lazy"><figcaption>Штора «Хвойная лапа» 3×3&nbsp;м</figcaption></figure>
+      <figure><img src="img/boxes-gold.jpg" alt="Светящиеся подарочные коробки в золоте" loading="lazy"><figcaption>Светящиеся коробки</figcaption></figure>
+    </div>
+    <p class="cap">Фото, которые вы прислали в&nbsp;WhatsApp</p>
+  </section>
+
+  <section>
+    <div class="eyebrow">Где теряются покупатели</div>
+    <h2>Что сейчас мешает</h2>
+    <ul class="list">
+      <li><span>В&nbsp;шапке четыре хита, а&nbsp;про остальное написано «Все цены в&nbsp;ТГ канале». Чтобы узнать цену Королевской 150&nbsp;см, человеку нужно перейти в&nbsp;Telegram и&nbsp;пролистать ленту.</span></li>
+      <li><span>Самая доступная цена, 11&nbsp;700&nbsp;₽, в&nbsp;шапку не&nbsp;попала. Кто видит только 25&nbsp;000&nbsp;₽, может решить, что литая ёлка ему не&nbsp;по&nbsp;бюджету, и&nbsp;уйти.</span></li>
+      <li><span>Заказ собирается по&nbsp;кусочкам: модель, высота, гирлянда, город, адрес. Каждое сообщение ждёт вашего ответа, а&nbsp;в&nbsp;декабре на&nbsp;это уходят часы.</span></li>
+      <li><span>Цена 2&nbsp;550&nbsp;₽ за&nbsp;«Хвойную лапу» для покупателей ёлки видна только в&nbsp;переписке. Кто не&nbsp;спросил, не&nbsp;знает, что гирлянду можно взять сразу и&nbsp;дешевле.</span></li>
+      <li><span>Производство у&nbsp;моделей разное: Царская из&nbsp;Краснодара, Королевская из&nbsp;Китая. Покупатель ёлки за&nbsp;25–34 тысячи спросит об&nbsp;этом одним из&nbsp;первых, и&nbsp;лучше, если ответ уже стоит в&nbsp;карточке.</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <div class="eyebrow">Покупатели</div>
+    <h2>Что спрашивают перед покупкой</h2>
+    <p class="lead">Две группы вопросов. Каталог отвечает на&nbsp;обе до&nbsp;того, как человек напишет вам.</p>
+    <div class="aud">
+      <div><h3>Ёлка</h3>
+        <div class="q">А&nbsp;заснеженная есть?</div>
+        <div class="q">Какую высоту брать, если потолок 2,7&nbsp;м?</div>
+        <div class="q">Чем Царская отличается от&nbsp;Королевской?</div>
+        <div class="q">Она полностью литая или внутри ПВХ?</div>
+        <div class="q">Сложно собирать?</div>
+      </div>
+      <div><h3>Гирлянда и&nbsp;доставка</h3>
+        <div class="q">Хватит&nbsp;ли 100&nbsp;м гирлянды на&nbsp;240&nbsp;см?</div>
+        <div class="q">Жёлтый свет или белый?</div>
+        <div class="q">Сколько доставка в&nbsp;Казань?</div>
+        <div class="q">Успеет&nbsp;ли прийти до&nbsp;праздников?</div>
+        <div class="q">Как оплатить?</div>
+      </div>
+    </div>
+    <div class="season">
+      <div><b>Ноябрь</b><span>выбирают и&nbsp;сравнивают, смотрят обзоры, спрашивают про&nbsp;высоту</span></div>
+      <div><b>Начало декабря</b><span>больше всего заказов и&nbsp;отправок, вопросов в&nbsp;WhatsApp десятки</span></div>
+      <div><b>После 20&nbsp;декабря</b><span>решают быстро, главное успеть доставить к&nbsp;празднику</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Рынок</div>
+    <h2>Кто ещё работает в&nbsp;нише</h2>
+    <div class="comp">
+      <div class="cc">
+        <span class="where">Уфа · ул. 50-летия Октября, 16</span>
+        <h3>ELKA.STORE</h3>
+        <a href="https://ufa.elka.store/iskusstvennye-yolki/litye" target="_blank" rel="noopener">ufa.elka.store</a>
+        <p>Сеть магазинов ёлок и&nbsp;гирлянд. На&nbsp;сайте отдельные разделы литых, премиум и&nbsp;заснеженных ёлок, цена в&nbsp;каждой карточке: например, ель Монте люкс 1,2&nbsp;м за&nbsp;15&nbsp;120&nbsp;₽. Есть выставочный зал и&nbsp;самовывоз, в&nbsp;другие города отправляют транспортными компаниями.</p>
+        <div class="tags"><span>Цена в&nbsp;карточке</span><span>Заснеженные отдельно</span><span>Выставочный зал</span></div>
+      </div>
+      <div class="cc">
+        <span class="where">Уфа · гипермаркет</span>
+        <h3>Лемана ПРО</h3>
+        <a href="https://ufa.lemanapro.ru/catalogue/iskusstvennye-eli/litye-elki/" target="_blank" rel="noopener">ufa.lemanapro.ru</a>
+        <p>Раздел литых ёлок с&nbsp;фильтром «заснеженные». Заснеженная модель 180&nbsp;см в&nbsp;выдаче стоит около 5,6&nbsp;тыс.&nbsp;₽. Покупатель видит, что «литая» бывает и&nbsp;дешевле, поэтому важно сразу показать, за&nbsp;что он платит: полностью литая хвоя, высота, сборка.</p>
+        <div class="tags"><span>Фильтр «заснеженные»</span><span>Массовый сегмент</span></div>
+      </div>
+      <div class="cc">
+        <span class="where">Россия · производитель</span>
+        <h3>Max Christmas</h3>
+        <a href="https://vk.ru/@maxchristmas-kak-vybrat-lituu-elku" target="_blank" rel="noopener">статья «Как выбрать литую ёлку»</a>
+        <p>Больше сотни моделей искусственных ёлок, литые среди них. Объясняют покупателю, как выбирать литую ёлку, и&nbsp;отправляют СДЭК и&nbsp;«Деловыми линиями».</p>
+        <div class="tags"><span>Статья о&nbsp;выборе</span><span>Доставка ТК</span></div>
+      </div>
+      <div class="cc">
+        <span class="where">Маркетплейсы · бренд</span>
+        <h3>Crystal Trees</h3>
+        <a href="https://www.vseinstrumenti.ru/brand/crystal-trees-2072322" target="_blank" rel="noopener">vseinstrumenti.ru</a>
+        <p>Литые ели от&nbsp;185 до&nbsp;250&nbsp;см. У&nbsp;модели Персея есть отдельная версия с&nbsp;вплетённой гирляндой: ёлку и&nbsp;свет покупают одной покупкой.</p>
+        <div class="tags"><span>Ёлка с&nbsp;гирляндой</span><span>Высоты до&nbsp;250&nbsp;см</span></div>
+      </div>
+      <div class="cc">
+        <span class="where">Instagram · по&nbsp;всей России</span>
+        <h3>Небольшие продавцы литых ёлок</h3>
+        <p>Таких магазинов в&nbsp;Instagram десятки, в&nbsp;том числе в&nbsp;соседних городах. Чаще всего прайс лежит в&nbsp;хайлайтах, отдельным файлом или в&nbsp;Telegram-канале, а&nbsp;заказ оформляется в&nbsp;директе. Каталог со&nbsp;своей ссылкой здесь пока редкость.</p>
+        <div class="tags"><span>Прайс в&nbsp;хайлайтах</span><span>Заказ в&nbsp;директе</span></div>
+      </div>
+    </div>
+    <p class="small">Описания собраны по&nbsp;открытым данным и&nbsp;поисковой выдаче на&nbsp;12&nbsp;ноября 2026. Цены и&nbsp;условия у&nbsp;магазинов могли измениться.</p>
+    <div class="two">
+      <div class="box norm"><h3>Что стало нормой</h3><ul><li>Каталог с&nbsp;ценой в&nbsp;карточке</li><li>Отдельный раздел заснеженных ёлок</li><li>Несколько высот у&nbsp;одной модели</li><li>Отправка транспортными компаниями</li></ul></div>
+      <div class="box gap"><h3>Чего я у&nbsp;них не&nbsp;встретила</h3><ul><li>Видеообзор каждой модели от&nbsp;самого продавца</li><li>Подбор гирлянды под&nbsp;высоту ёлки</li><li>Подбор высоты по&nbsp;потолку</li><li>Заказ комплектом одним сообщением в&nbsp;WhatsApp</li></ul></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Задачи</div>
+    <h2>Что должен делать ваш каталог</h2>
+    <div class="tasks">
+      <div><h3>Показывать все модели с&nbsp;ценами</h3><p>Царская, Королевская, Сказочная и&nbsp;заснеженные: высота, цена и&nbsp;наличие на&nbsp;одной странице, распродажа отдельной полкой.</p></div>
+      <div><h3>Помогать выбрать высоту</h3><p>Человек указывает потолок, например 2,7&nbsp;м, и&nbsp;видит ёлки до&nbsp;240&nbsp;см.</p></div>
+      <div><h3>Продавать гирлянду вместе с&nbsp;ёлкой</h3><p>«Хвойная лапа» за&nbsp;2&nbsp;550&nbsp;₽ одной галочкой, жёлтый или белый свет. Рядом штора и&nbsp;светящиеся коробки.</p></div>
+      <div><h3>Собирать доставку в&nbsp;заказ</h3><p>Город и&nbsp;способ доставки указаны сразу, без отдельных вопросов.</p></div>
+      <div><h3>Отправлять заказ в&nbsp;WhatsApp</h3><p>Модель, высота, гирлянда, город и&nbsp;телефон одним сообщением.</p></div>
+      <div><h3>Показывать ваши видео и&nbsp;отзывы</h3><p>Обзоры и&nbsp;распаковка рядом с&nbsp;каждой моделью, отзывы и&nbsp;города, куда уже отправляли.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Пример</div>
+    <h2>Было и&nbsp;стало</h2>
+    <p class="lead">Так обычно выглядит путь от&nbsp;первого вопроса до&nbsp;заказа, и&nbsp;так он выглядит с&nbsp;каталогом.</p>
+    <div class="ba">
+      <div class="chat">
+        <span class="lbl">Сейчас</span>
+        <div class="b in">Здравствуйте, сколько стоит Королевская?</div>
+        <div class="b out">Здравствуйте! Какая высота нужна?</div>
+        <div class="b in">Потолок 2,7. А&nbsp;заснеженная есть?</div>
+        <div class="b out">Под&nbsp;2,7 подойдёт 240&nbsp;см…</div>
+        <div class="b in">А&nbsp;гирлянду какую взять? И&nbsp;сколько до&nbsp;Казани?</div>
+        <p class="foot">Пять сообщений, а&nbsp;до&nbsp;адреса и&nbsp;оплаты ещё не&nbsp;дошли.</p>
+      </div>
+      <div class="chat">
+        <span class="lbl">С&nbsp;каталогом</span>
+        <div class="b order"><b>Заказ с&nbsp;сайта</b><div class="th"><img src="img/korolevskaya.jpg" alt=""><img src="img/garland-reel.jpg" alt=""></div>• Королевская ель, 240&nbsp;см · 31&nbsp;000&nbsp;₽
+• Гирлянда «Хвойная лапа», 100&nbsp;м · 2&nbsp;550&nbsp;₽
+• Итого: 33&nbsp;550&nbsp;₽
+• Доставка: Казань
+• Алина, +7&nbsp;9…</div>
+        <p class="foot">Одно сообщение. Остаётся подтвердить и&nbsp;отправить.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Идеи</div>
+    <h2>Что можно предложить вашим покупателям</h2>
+    <p class="lead">Это варианты на&nbsp;обсуждение, берите то, что подходит.</p>
+    <div class="ideas">
+      <div><h3>Ёлка и&nbsp;гирлянда одной кнопкой</h3><p>Цена 2&nbsp;550&nbsp;₽ для покупателей ёлки у&nbsp;вас уже есть. В&nbsp;каталоге это галочка в&nbsp;карточке, и&nbsp;комплект собирается без вопросов.</p></div>
+      <div><h3>Бронь на&nbsp;декабрь</h3><p>Покупатель фиксирует ёлку и&nbsp;цену в&nbsp;ноябре, вы отправляете к&nbsp;нужной дате. Меньше суеты в&nbsp;последнюю неделю.</p></div>
+      <div><h3>Ёлка в&nbsp;подарок родителям</h3><p>Заказ из&nbsp;одного города с&nbsp;доставкой в&nbsp;другой к&nbsp;нужному дню. Отправка по&nbsp;России у&nbsp;вас уже есть.</p></div>
+      <div><h3>Набор «всё к&nbsp;празднику»</h3><p>Ёлка, «Хвойная лапа», штора на&nbsp;окно и&nbsp;светящиеся коробки одним заказом. Человек получает готовый угол к&nbsp;Новому году, а&nbsp;вы один заказ вместо четырёх.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Вопросы</div>
+    <h2>Что нужно уточнить</h2>
+    <ol class="qlist">
+      <li>Есть&nbsp;ли заснеженные модели? Что за&nbsp;ёлка в&nbsp;хайлайте «Снеж. кор…»: высоты, цены и&nbsp;фото.</li>
+      <li>«Хвойная лапа» за&nbsp;2&nbsp;550&nbsp;₽ продаётся только вместе с&nbsp;ёлкой? Сколько она стоит отдельно? До&nbsp;какого числа идёт распродажа Сказочной?</li>
+      <li>Доставка: есть&nbsp;ли самовывоз в&nbsp;Уфе, какими транспортными компаниями отправляете, как считается стоимость?</li>
+      <li>Как удобнее принимать оплату: предоплата, перевод, при получении?</li>
+      <li>Все модели в&nbsp;наличии или часть под&nbsp;заказ? Сколько ждать заказную?</li>
+      <li>Какое название поставить на&nbsp;сайт: irnazarova_elki или другое?</li>
+      <li>Можно&nbsp;ли взять отзывы из&nbsp;хайлайта «Отзыв» и&nbsp;видео из&nbsp;ваших рилс?</li>
+      <li>Название ИП для&nbsp;политики конфиденциальности.</li>
+    </ol>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Подготовила Анастасия Абдуллаева</span>
+    <span class="sign"><span><b>FOR.MI</b> designed &amp; developed by ABN</span><a class="rnd" href="https://t.me/abanev_dev" target="_blank" rel="noopener" aria-label="Telegram" title="Telegram"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.4 4.3 2.9 11.5c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.5c.2.6.4.8.9.8s.6-.2.9-.5l2.3-2.2 4.8 3.5c.9.5 1.5.2 1.7-.8L22.8 5.8c.3-1.3-.4-1.9-1.4-1.5zM8.6 14.1l9.6-6c.5-.3.9-.1.5.2l-7.8 7.1-.3 3.3-2-4.6z"/></svg></a></span>
+  </div>
+</footer>
+
+</body>
+</html>
